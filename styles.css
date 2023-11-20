@@ -16,3 +16,90 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+.container{
+    position: relative;
+    width: 100%;
+}
+
+.nav{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav.active{
+    width: 80px;
+}
+
+.nav ul{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+}
+
+
+
+.nav ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.nav ul li:hover,
+.nav ul li.hovered
+{
+    background: #fff;
+}
+
+.nav ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+
+ 
+
+.nav li a{
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+}
+
+.nav li:hover a,
+.nav li.hovered a
+{
+    color: var(--blue);
+}
+
+.nav .icon{
+    position: relative;
+    /* display: block; */
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+    
+}
+
+.nav img{
+    width: 1.75em;
+    color: #fff;
+}
+
+.nav .title{
+    position: relative;
+    padding: 0 10px;
+    line-height: 60px;
+    white-space: nowrap; 
+}
+
+
