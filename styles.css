@@ -108,3 +108,16 @@ body {
   pointer-events: none;
 }
 
+.nav li:hover a::after,
+.nav li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  bottom: -50px;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px #fff;
+  pointer-events: none;
+}
