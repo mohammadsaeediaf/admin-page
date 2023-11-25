@@ -155,3 +155,53 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+
+.card-box{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 30px;
+}
+
+.card{
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.numbers{
+  position: relative;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.card-name{
+  color: var(--black2);
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.icon-box img{
+  filter: invert(25%) sepia(90%) saturate(100%) hue-rotate(140deg) brightness(70%) contrast(10%);
+}
+
+.card:hover{
+  background: var(--blue);
+}
+
+.card:hover img{
+  filter: invert(100%) sepia(103%) saturate(100%) hue-rotate(140deg) brightness(100%) contrast(100%);
+}
+
+.card:hover .numbers , .card:hover .card-name{
+  color: #fff;
+}
