@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
 .container {
   position: relative;
   width: 100%;
@@ -122,8 +123,7 @@ body {
   pointer-events: none;
 }
 
-
-/* main */
+/*main*/
 
 .main {
   position: absolute;
@@ -139,73 +139,6 @@ body {
   left: 80px;
 }
 
-.user {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.user img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-.card-box{
-  position: relative;
-  width: 100%;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-gap: 30px;
-}
-
-.card{
-  position: relative;
-  background: #fff;
-  padding: 30px;
-  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.numbers{
-  position: relative;
-  font-size: 2.5em;
-  font-weight: 500;
-  color: var(--blue);
-}
-
-.card-name{
-  color: var(--black2);
-  font-size: 1.1em;
-  margin-top: 5px;
-}
-
-.icon-box img{
-  filter: invert(25%) sepia(90%) saturate(100%) hue-rotate(140deg) brightness(70%) contrast(10%);
-}
-
-.card:hover{
-  background: var(--blue);
-}
-
-.card:hover img{
-  filter: invert(100%) sepia(103%) saturate(100%) hue-rotate(140deg) brightness(100%) contrast(100%);
-}
-
-.card:hover .numbers , .card:hover .card-name{
-  color: #fff;
-=======
 .topbar {
   width: 100%;
   height: 60px;
@@ -254,56 +187,18 @@ body {
   top: 0;
   left: 10px;
   font-size: 1.2em;
-
 }
 
-.status.delivered{
-  padding: 2px 4px;
-  background: #8de01c;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 14px; 
-}
-
-.status.pending{
-  padding: 2px 4px;
-  background: #f9ca3f;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 14px; 
-}
-
-.status.inprogress{
-  padding: 2px 4px;
-  background: #f00;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 14px; 
-}
-
-.recent-customers{
-  position: relative;
-  display: grid;
-  padding: 20px;
-  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-  min-height: 500px;
-  border-radius: 20px;
-  background: #fff;
-}
-
-.recent-customers .imgbx{
+.user {
   position: relative;
   width: 40px;
   height: 40px;
-  overflow: hidden;
   border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-
-.recent-customers .imgbx img{
+.user img {
   position: absolute;
   top: 0;
   left: 0;
@@ -312,33 +207,218 @@ body {
   object-fit: cover;
 }
 
-.recent-customers tr:hover{
+.card-box {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.numbers {
+  position: relative;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.card-name {
+  color: var(--black2);
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.icon-box img {
+  filter: invert(25%) sepia(90%) saturate(100%) hue-rotate(140deg)
+    brightness(70%) contrast(10%);
+}
+
+.card:hover {
+  background: var(--blue);
+}
+
+.card:hover img {
+  filter: invert(100%) sepia(103%) saturate(100%) hue-rotate(140deg)
+    brightness(100%) contrast(100%);
+}
+
+.card:hover .numbers,
+.card:hover .card-name {
+  color: #fff;
+}
+
+.data-list {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  /* margin-top:10px; */
+}
+
+.recent-orders {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-decoration: none;
+}
+
+.card-header h2 {
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.btn {
+  text-decoration: none;
+  background: var(--blue);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.recent-orders table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.recent-orders table thead td {
+  font-weight: 600;
+}
+
+.recent-orders table tr {
+  color: var(--black1);
+  border-bottom: 1px solid #bbb;
+}
+
+.recent-orders table tr:last-child {
+  border-bottom: none;
+}
+
+.recent-orders table tbody tr:hover {
   background: var(--blue);
   color: #fff;
 }
 
-.recent-customers tr td{
+.recent-orders table td {
+  padding: 10px;
+}
+
+.recent-orders table tr td:last-child {
+  text-align: end;
+}
+
+.recent-orders table tr td:nth-child(2) {
+  text-align: end;
+}
+
+.recent-orders table tr td:nth-child(3) {
+  text-align: center;
+}
+
+.status.delivered {
+  padding: 2px 4px;
+  background: #8de01c;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.status.pending {
+  padding: 2px 4px;
+  background: #f9ca3f;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.status.inprogress {
+  padding: 2px 4px;
+  background: #f00;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.recent-customers {
+  position: relative;
+  display: grid;
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  min-height: 500px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.recent-customers .imgbx {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.recent-customers .imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recent-customers tr:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+.recent-customers tr td {
   padding: 12px 10px;
 }
 
-.recent-customers table{
+.recent-customers table {
   /* border-collapse:collapse; */
   border-spacing: 0;
   margin: 10px 0;
-
 }
 
-.recent-customers h4{
+.recent-customers h4 {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.2em;
 }
 
-.recent-customers span{
+.recent-customers span {
   font-size: 14px;
   color: var(--black2);
 }
 
-.recent-customers tr:hover span{
+.recent-customers tr:hover span {
   color: #fff;
 }
