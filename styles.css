@@ -422,3 +422,76 @@ body {
 .recent-customers tr:hover span {
   color: #fff;
 }
+
+/* responsiv design */
+
+@media (max-width: 991px) {
+  .nav {
+    left: -300px;
+  }
+
+  .nav.active {
+    left: 0;
+    width: 300px;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  .main.active {
+    left: 300px;
+  }
+
+  .card-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .data-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .recent-orders {
+    overflow-x: auto;
+  }
+
+  .status.inprogress {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-header h2 {
+    font-size: 20px;
+  }
+
+  .user {
+    min-width: 40px;
+  }
+
+  .nav {
+    width: 100%;
+    left: -100%;
+    z-index: 1;
+  }
+
+  .nav.active {
+    left: 0;
+    width: 100%;
+  }
+
+  .toggle {
+    z-index: 2;
+  }
+
+  .main.active .toggle {
+    filter: invert(100%) sepia(103%) saturate(100%) hue-rotate(140deg)
+      brightness(100%) contrast(100%);
+  }
+}
